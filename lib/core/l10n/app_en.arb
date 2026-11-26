@@ -1,0 +1,71 @@
+{
+  "@@locale": "en",
+  "appName": "Pehrawan",
+  "tagline": "Fashion, your way",
+  "currencyPrefix": "Rs.",
+  "home": "Home",
+  "categories": "Categories",
+  "offers": "Offers",
+  "cart": "Cart",
+  "profile": "Profile",
+  "searchHint": "Search for lawn, kurtas, formal wear...",
+  "flashSale": "Flash Sale",
+  "justForYou": "Just For You",
+  "seeAll": "See All",
+  "addToCart": "Add to Cart",
+  "buyNow": "Buy Now",
+  "outOfStock": "Out of Stock",
+  "inStock": "In Stock",
+  "codAvailable": "Cash on Delivery Available",
+  "returnPolicyDays": "{days}-Day Easy Returns",
+  "@returnPolicyDays": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "originalGuarantee": "100% Original",
+  "codLabel": "Cash on Delivery",
+  "emptyCartTitle": "Your cart is empty",
+  "emptyCartSubtitle": "Looks like you haven't added anything to your cart yet.",
+  "shopNow": "Shop Now",
+  "retry": "Retry",
+  "offlineMessage": "You are offline. Showing cached items.",
+  "noInternetTitle": "No Internet Connection",
+  "noInternetSubtitle": "Please check your Wi-Fi or mobile data and try again.",
+  "errorGenericTitle": "Something went wrong",
+  "errorGenericSubtitle": "We couldn't load this right now. Please try again.",
+  "designSystemShowcase": "Design System Showcase",
+  "developerTools": "Developer Tools",
+  "enableFutureDepartments": "Enable Future Departments (Scalability Proof)",
+  "offPercent": "{percent}% OFF",
+  "@offPercent": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "walletTitle": "Pehrawan Wallet",
+  "walletBalance": "Available Balance",
+  "topUp": "Top Up",
+  "orderPlaced": "Order Placed",
+  "orderPacked": "Packed",
+  "orderShipped": "Shipped",
+  "orderOutForDelivery": "Out for Delivery",
+  "orderDelivered": "Delivered",
+  "skip": "Skip",
+  "next": "Next",
+  "getStarted": "Get Started",
+  "continueAsGuest": "Continue as guest",
+  "languageSelectTitle": "Choose your language",
+  "english": "English",
+  "urdu": "اردو",
+  "phoneRequired": "Please enter your mobile number",
+  "phoneInvalid": "Enter a valid Pakistani mobile number (03XXXXXXXXX or +923XXXXXXXXX)",
+  "otpRequired": "Please enter the 6-digit OTP",
+  "otpInvalid": "OTP must be 6 digits",
+  "fieldRequired": "This field is required",
+  "invalidEmail": "Please enter a valid email address"
+}

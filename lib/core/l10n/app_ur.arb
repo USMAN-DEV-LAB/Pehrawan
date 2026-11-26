@@ -1,0 +1,71 @@
+{
+  "@@locale": "ur",
+  "appName": "پہراوان",
+  "tagline": "فیشن، آپ کے انداز میں",
+  "currencyPrefix": "روپے",
+  "home": "ہوم",
+  "categories": "اقسام",
+  "offers": "آفرز",
+  "cart": "کارٹ",
+  "profile": "پروفائل",
+  "searchHint": "لان، کرتا، فارمل ملبوسات تلاش کریں...",
+  "flashSale": "فلیش سیل",
+  "justForYou": "آپ کے لیے خاص",
+  "seeAll": "سب دیکھیں",
+  "addToCart": "کارٹ میں شامل کریں",
+  "buyNow": "ابھی خریدیں",
+  "outOfStock": "اسٹاک ختم",
+  "inStock": "دستیاب ہے",
+  "codAvailable": "کیش آن ڈیلیوری دستیاب ہے",
+  "returnPolicyDays": "{days} دن کی آسان واپسی",
+  "@returnPolicyDays": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "originalGuarantee": "100% اصل مصنوعات",
+  "codLabel": "کیش آن ڈیلیوری",
+  "emptyCartTitle": "آپ کا کارٹ خالی ہے",
+  "emptyCartSubtitle": "لگتا ہے آپ نے ابھی تک کارٹ میں کچھ شامل نہیں کیا۔",
+  "shopNow": "خریداری کریں",
+  "retry": "دوبارہ کوشش کریں",
+  "offlineMessage": "آپ آف لائن ہیں۔ محفوظ کردہ اشیاء دکھائی جا رہی ہیں۔",
+  "noInternetTitle": "انٹرنیٹ کنکشن نہیں ہے",
+  "noInternetSubtitle": "براہ کرم اپنا وائی فائی یا موبائل ڈیٹا چیک کریں اور دوبارہ کوشش کریں۔",
+  "errorGenericTitle": "کچھ غلط ہو گیا",
+  "errorGenericSubtitle": "ہم ابھی اسے لوڈ نہیں کر سکے۔ براہ کرم دوبارہ کوشش کریں۔",
+  "designSystemShowcase": "ڈیزائن سسٹم شوکیس",
+  "developerTools": "ڈویلپر ٹولز",
+  "enableFutureDepartments": "آئندہ شعبہ جات فعال کریں",
+  "offPercent": "{percent}% رعایت",
+  "@offPercent": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "walletTitle": "پہراوان والٹ",
+  "walletBalance": "دستیاب بیلنس",
+  "topUp": "رقم شامل کریں",
+  "orderPlaced": "آرڈر موصول",
+  "orderPacked": "پیک ہو گیا",
+  "orderShipped": "بھیج دیا گیا",
+  "orderOutForDelivery": "ڈیلیوری کے لیے روانہ",
+  "orderDelivered": "پہنچا دیا گیا",
+  "skip": "چھوڑیں",
+  "next": "آگے",
+  "getStarted": "شروع کریں",
+  "continueAsGuest": "مہمان کے طور پر جاری رکھیں",
+  "languageSelectTitle": "اپنی زبان منتخب کریں",
+  "english": "English",
+  "urdu": "اردو",
+  "phoneRequired": "براہ کرم اپنا موبائل نمبر درج کریں",
+  "phoneInvalid": "درست پاکستانی موبائل نمبر درج کریں (03XXXXXXXXX یا +923XXXXXXXXX)",
+  "otpRequired": "براہ کرم 6 ہندسوں کا او ٹی پی درج کریں",
+  "otpInvalid": "او ٹی پی 6 ہندسوں کا ہونا چاہیے",
+  "fieldRequired": "یہ خانہ پر کرنا ضروری ہے",
+  "invalidEmail": "براہ کرم درست ای میل درج کریں"
+}
