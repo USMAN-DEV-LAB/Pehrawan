@@ -154,5 +154,71 @@
   "cameraSearchHint": "بصری تلاش کی اجازت فعال ہونے پر طلب کی جائے گی۔",
   "voiceSearchHint": "صوتی تلاش کی اجازت فعال ہونے پر طلب کی جائے گی۔",
   "futureDeptsOn": "آئندہ شعبہ جات فعال کر دیے گئے (جوتے اور بیگز)",
-  "futureDeptsOff": "آئندہ شعبہ جات غیر فعال (لانچ موڈ)"
+  "futureDeptsOff": "آئندہ شعبہ جات غیر فعال (لانچ موڈ)",
+  "onlyNLeft": "اسٹاک میں صرف {count} باقی ہیں",
+  "@onlyNLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectAllOptions": "براہ کرم پہلے تمام ضروری آپشنز منتخب کریں",
+  "addedToCart": "کارٹ میں شامل کر دیا گیا",
+  "viewCart": "کارٹ دیکھیں",
+  "chat": "چیٹ",
+  "chatSellerHint": "فروخت کنندہ سے چیٹ یہاں کھلے گی۔",
+  "detailsTab": "تفصیلات",
+  "reviewsTab": "تبصرے",
+  "qaTab": "سوال و جواب",
+  "similarProducts": "ملتی جلتی مصنوعات",
+  "deliveryEstimate": "معیاری ڈیلیوری",
+  "soldBy": "فروخت کنندہ: {seller}",
+  "@soldBy": {
+    "placeholders": {
+      "seller": {
+        "type": "String"
+      }
+    }
+  },
+  "priceDropAlert": "قیمت کم ہونے کا الرٹ",
+  "emptyWishlistTitle": "آپ کی پسندیدہ فہرست خالی ہے",
+  "emptyWishlistSubtitle": "اپنی پسندیدہ اشیاء محفوظ کریں اور قیمت کم ہونے پر اطلاع پائیں۔",
+  "promoCode": "پرومو کوڈ",
+  "promoCodeHint": "کوڈ درج کریں (مثلاً PEHRAWAN10)",
+  "apply": "لاگو کریں",
+  "promoApplied": "پرومو کوڈ {code} لاگو ہو گیا",
+  "@promoApplied": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "promoInvalid": "غلط یا زائد المیعاد پرومو کوڈ",
+  "promoMinOrder": "کم از کم {amount} کا آرڈر ضروری ہے",
+  "@promoMinOrder": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "subtotal": "ذیلی کل",
+  "discount": "رعایت",
+  "deliveryFee": "ڈیلیوری فیس",
+  "free": "مفت",
+  "total": "کل رقم",
+  "proceedToCheckout": "چیک آؤٹ پر جائیں",
+  "itemRemoved": "{title} ہٹا دیا گیا",
+  "@itemRemoved": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "undo": "واپس لائیں",
+  "noReviewsYet": "پاکستان بھر کے تصدیق شدہ خریداروں کی جانب سے 4.7 اوسط درجہ بندی۔",
+  "qaSampleQuestion": "سوال: کیا کپڑا خالص کاٹن/لان ہے؟\nجواب: جی ہاں، 100% اصل اور آرام دہ کپڑا معیاری سلائی کے ساتھ۔"
 }

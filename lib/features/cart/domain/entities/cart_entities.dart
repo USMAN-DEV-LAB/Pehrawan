@@ -20,6 +20,7 @@ abstract class CartItem with _$CartItem {
     required Map<String, String> selectedOptions,
     required int unitPrice,
     required int quantity,
+    @Default(10) int maxStock,
   }) = _CartItem;
 
   factory CartItem.fromJson(Map<String, dynamic> json) =>

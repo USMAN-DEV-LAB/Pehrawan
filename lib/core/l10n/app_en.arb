@@ -154,5 +154,71 @@
   "cameraSearchHint": "Visual search permission will be requested when enabled.",
   "voiceSearchHint": "Voice search permission will be requested when enabled.",
   "futureDeptsOn": "Future departments enabled (Footwear & Bags)",
-  "futureDeptsOff": "Future departments disabled (Launch mode)"
+  "futureDeptsOff": "Future departments disabled (Launch mode)",
+  "onlyNLeft": "Only {count} left in stock",
+  "@onlyNLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectAllOptions": "Please select all required options first",
+  "addedToCart": "Added to cart",
+  "viewCart": "View Cart",
+  "chat": "Chat",
+  "chatSellerHint": "Seller chat will open here.",
+  "detailsTab": "Details",
+  "reviewsTab": "Reviews",
+  "qaTab": "Q&A",
+  "similarProducts": "Similar Products",
+  "deliveryEstimate": "Standard Delivery",
+  "soldBy": "Sold by {seller}",
+  "@soldBy": {
+    "placeholders": {
+      "seller": {
+        "type": "String"
+      }
+    }
+  },
+  "priceDropAlert": "Price-drop alert",
+  "emptyWishlistTitle": "Your wishlist is empty",
+  "emptyWishlistSubtitle": "Save items you love and get notified when prices drop.",
+  "promoCode": "Promo Code",
+  "promoCodeHint": "Enter code (e.g. PEHRAWAN10)",
+  "apply": "Apply",
+  "promoApplied": "Promo code {code} applied",
+  "@promoApplied": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "promoInvalid": "Invalid or expired promo code",
+  "promoMinOrder": "Minimum spend of {amount} required",
+  "@promoMinOrder": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "subtotal": "Subtotal",
+  "discount": "Discount",
+  "deliveryFee": "Delivery Fee",
+  "free": "Free",
+  "total": "Total",
+  "proceedToCheckout": "Proceed to Checkout",
+  "itemRemoved": "{title} removed",
+  "@itemRemoved": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "undo": "Undo",
+  "noReviewsYet": "4.7 average rating from verified buyers across Pakistan.",
+  "qaSampleQuestion": "Q: Is the fabric pure cotton/lawn?\nA: Yes, 100% original breathable fabric with neat stitching."
 }

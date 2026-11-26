@@ -733,6 +733,192 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Future departments disabled (Launch mode)'**
   String get futureDeptsOff;
+
+  /// No description provided for @onlyNLeft.
+  ///
+  /// In en, this message translates to:
+  /// **'Only {count} left in stock'**
+  String onlyNLeft(int count);
+
+  /// No description provided for @selectAllOptions.
+  ///
+  /// In en, this message translates to:
+  /// **'Please select all required options first'**
+  String get selectAllOptions;
+
+  /// No description provided for @addedToCart.
+  ///
+  /// In en, this message translates to:
+  /// **'Added to cart'**
+  String get addedToCart;
+
+  /// No description provided for @viewCart.
+  ///
+  /// In en, this message translates to:
+  /// **'View Cart'**
+  String get viewCart;
+
+  /// No description provided for @chat.
+  ///
+  /// In en, this message translates to:
+  /// **'Chat'**
+  String get chat;
+
+  /// No description provided for @chatSellerHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Seller chat will open here.'**
+  String get chatSellerHint;
+
+  /// No description provided for @detailsTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Details'**
+  String get detailsTab;
+
+  /// No description provided for @reviewsTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Reviews'**
+  String get reviewsTab;
+
+  /// No description provided for @qaTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Q&A'**
+  String get qaTab;
+
+  /// No description provided for @similarProducts.
+  ///
+  /// In en, this message translates to:
+  /// **'Similar Products'**
+  String get similarProducts;
+
+  /// No description provided for @deliveryEstimate.
+  ///
+  /// In en, this message translates to:
+  /// **'Standard Delivery'**
+  String get deliveryEstimate;
+
+  /// No description provided for @soldBy.
+  ///
+  /// In en, this message translates to:
+  /// **'Sold by {seller}'**
+  String soldBy(String seller);
+
+  /// No description provided for @priceDropAlert.
+  ///
+  /// In en, this message translates to:
+  /// **'Price-drop alert'**
+  String get priceDropAlert;
+
+  /// No description provided for @emptyWishlistTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Your wishlist is empty'**
+  String get emptyWishlistTitle;
+
+  /// No description provided for @emptyWishlistSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Save items you love and get notified when prices drop.'**
+  String get emptyWishlistSubtitle;
+
+  /// No description provided for @promoCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Promo Code'**
+  String get promoCode;
+
+  /// No description provided for @promoCodeHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter code (e.g. PEHRAWAN10)'**
+  String get promoCodeHint;
+
+  /// No description provided for @apply.
+  ///
+  /// In en, this message translates to:
+  /// **'Apply'**
+  String get apply;
+
+  /// No description provided for @promoApplied.
+  ///
+  /// In en, this message translates to:
+  /// **'Promo code {code} applied'**
+  String promoApplied(String code);
+
+  /// No description provided for @promoInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid or expired promo code'**
+  String get promoInvalid;
+
+  /// No description provided for @promoMinOrder.
+  ///
+  /// In en, this message translates to:
+  /// **'Minimum spend of {amount} required'**
+  String promoMinOrder(String amount);
+
+  /// No description provided for @subtotal.
+  ///
+  /// In en, this message translates to:
+  /// **'Subtotal'**
+  String get subtotal;
+
+  /// No description provided for @discount.
+  ///
+  /// In en, this message translates to:
+  /// **'Discount'**
+  String get discount;
+
+  /// No description provided for @deliveryFee.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivery Fee'**
+  String get deliveryFee;
+
+  /// No description provided for @free.
+  ///
+  /// In en, this message translates to:
+  /// **'Free'**
+  String get free;
+
+  /// No description provided for @total.
+  ///
+  /// In en, this message translates to:
+  /// **'Total'**
+  String get total;
+
+  /// No description provided for @proceedToCheckout.
+  ///
+  /// In en, this message translates to:
+  /// **'Proceed to Checkout'**
+  String get proceedToCheckout;
+
+  /// No description provided for @itemRemoved.
+  ///
+  /// In en, this message translates to:
+  /// **'{title} removed'**
+  String itemRemoved(String title);
+
+  /// No description provided for @undo.
+  ///
+  /// In en, this message translates to:
+  /// **'Undo'**
+  String get undo;
+
+  /// No description provided for @noReviewsYet.
+  ///
+  /// In en, this message translates to:
+  /// **'4.7 average rating from verified buyers across Pakistan.'**
+  String get noReviewsYet;
+
+  /// No description provided for @qaSampleQuestion.
+  ///
+  /// In en, this message translates to:
+  /// **'Q: Is the fabric pure cotton/lawn?\nA: Yes, 100% original breathable fabric with neat stitching.'**
+  String get qaSampleQuestion;
 }
 
 class _AppLocalizationsDelegate

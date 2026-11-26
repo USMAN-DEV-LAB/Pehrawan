@@ -354,4 +354,110 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get futureDeptsOff => 'Future departments disabled (Launch mode)';
+
+  @override
+  String onlyNLeft(int count) {
+    return 'Only $count left in stock';
+  }
+
+  @override
+  String get selectAllOptions => 'Please select all required options first';
+
+  @override
+  String get addedToCart => 'Added to cart';
+
+  @override
+  String get viewCart => 'View Cart';
+
+  @override
+  String get chat => 'Chat';
+
+  @override
+  String get chatSellerHint => 'Seller chat will open here.';
+
+  @override
+  String get detailsTab => 'Details';
+
+  @override
+  String get reviewsTab => 'Reviews';
+
+  @override
+  String get qaTab => 'Q&A';
+
+  @override
+  String get similarProducts => 'Similar Products';
+
+  @override
+  String get deliveryEstimate => 'Standard Delivery';
+
+  @override
+  String soldBy(String seller) {
+    return 'Sold by $seller';
+  }
+
+  @override
+  String get priceDropAlert => 'Price-drop alert';
+
+  @override
+  String get emptyWishlistTitle => 'Your wishlist is empty';
+
+  @override
+  String get emptyWishlistSubtitle =>
+      'Save items you love and get notified when prices drop.';
+
+  @override
+  String get promoCode => 'Promo Code';
+
+  @override
+  String get promoCodeHint => 'Enter code (e.g. PEHRAWAN10)';
+
+  @override
+  String get apply => 'Apply';
+
+  @override
+  String promoApplied(String code) {
+    return 'Promo code $code applied';
+  }
+
+  @override
+  String get promoInvalid => 'Invalid or expired promo code';
+
+  @override
+  String promoMinOrder(String amount) {
+    return 'Minimum spend of $amount required';
+  }
+
+  @override
+  String get subtotal => 'Subtotal';
+
+  @override
+  String get discount => 'Discount';
+
+  @override
+  String get deliveryFee => 'Delivery Fee';
+
+  @override
+  String get free => 'Free';
+
+  @override
+  String get total => 'Total';
+
+  @override
+  String get proceedToCheckout => 'Proceed to Checkout';
+
+  @override
+  String itemRemoved(String title) {
+    return '$title removed';
+  }
+
+  @override
+  String get undo => 'Undo';
+
+  @override
+  String get noReviewsYet =>
+      '4.7 average rating from verified buyers across Pakistan.';
+
+  @override
+  String get qaSampleQuestion =>
+      'Q: Is the fabric pure cotton/lawn?\nA: Yes, 100% original breathable fabric with neat stitching.';
 }

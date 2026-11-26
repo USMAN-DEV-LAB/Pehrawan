@@ -18,6 +18,7 @@ _CartItem _$CartItemFromJson(Map<String, dynamic> json) => _CartItem(
   selectedOptions: Map<String, String>.from(json['selectedOptions'] as Map),
   unitPrice: (json['unitPrice'] as num).toInt(),
   quantity: (json['quantity'] as num).toInt(),
+  maxStock: (json['maxStock'] as num?)?.toInt() ?? 10,
 );
 
 Map<String, dynamic> _$CartItemToJson(_CartItem instance) => <String, dynamic>{
@@ -32,6 +33,7 @@ Map<String, dynamic> _$CartItemToJson(_CartItem instance) => <String, dynamic>{
   'selectedOptions': instance.selectedOptions,
   'unitPrice': instance.unitPrice,
   'quantity': instance.quantity,
+  'maxStock': instance.maxStock,
 };
 
 _CartTotals _$CartTotalsFromJson(Map<String, dynamic> json) => _CartTotals(

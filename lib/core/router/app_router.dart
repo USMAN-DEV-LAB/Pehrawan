@@ -7,6 +7,8 @@ import 'package:pehrawan/core/providers/app_providers.dart';
 import 'package:pehrawan/core/widgets/main_shell_scaffold.dart';
 import 'package:pehrawan/features/auth/presentation/providers/auth_provider.dart';
 import 'package:pehrawan/features/auth/presentation/screens/login_screen.dart';
+import 'package:pehrawan/features/cart/presentation/providers/cart_providers.dart';
+import 'package:pehrawan/features/cart/presentation/screens/cart_screen.dart';
 import 'package:pehrawan/features/catalog/presentation/screens/categories_screen.dart';
 import 'package:pehrawan/features/catalog/presentation/screens/product_listing_screen.dart';
 import 'package:pehrawan/features/design_system/presentation/screens/design_system_showcase_screen.dart';
@@ -14,7 +16,9 @@ import 'package:pehrawan/features/home/presentation/screens/home_screen.dart';
 import 'package:pehrawan/features/onboarding/presentation/screens/language_select_screen.dart';
 import 'package:pehrawan/features/onboarding/presentation/screens/onboarding_screen.dart';
 import 'package:pehrawan/features/onboarding/presentation/screens/splash_screen.dart';
+import 'package:pehrawan/features/product/presentation/screens/product_detail_screen.dart';
 import 'package:pehrawan/features/search/presentation/screens/search_screen.dart';
+import 'package:pehrawan/features/wishlist/presentation/screens/wishlist_screen.dart';
 
 abstract final class AppRoutes {
   static const String splash = '/splash';
@@ -31,6 +35,7 @@ abstract final class AppRoutes {
   static const String productBase = '/product';
   static const String wishlist = '/wishlist';
   static const String notifications = '/notifications';
+  static const String checkout = '/checkout';
   static const String designSystem = '/design-system';
 }
 
@@ -73,7 +78,11 @@ final routerProvider = Provider<GoRouter>((ref) {
       ),
       StatefulShellRoute.indexedStack(
         builder: (context, state, navigationShell) {
-          return MainShellScaffold(navigationShell: navigationShell);
+          final cartCount = ref.watch(cartBadgeCountProvider);
+          return MainShellScaffold(
+            navigationShell: navigationShell,
+            cartCount: cartCount,
+          );
         },
         branches: [
           StatefulShellBranch(
@@ -107,10 +116,7 @@ final routerProvider = Provider<GoRouter>((ref) {
             routes: [
               GoRoute(
                 path: AppRoutes.cart,
-                builder: (context, state) => PhaseTabPlaceholderScreen(
-                  title: context.l10n.cart,
-                  icon: Icons.shopping_bag_outlined,
-                ),
+                builder: (context, state) => const CartScreen(),
               ),
             ],
           ),
@@ -152,16 +158,19 @@ final routerProvider = Provider<GoRouter>((ref) {
       ),
       GoRoute(
         path: '${AppRoutes.productBase}/:id',
-        builder: (context, state) => PhaseTabPlaceholderScreen(
-          title: 'Product ${state.pathParameters['id'] ?? ''}',
-          icon: Icons.checkroom_outlined,
+        builder: (context, state) => ProductDetailScreen(
+          productId: state.pathParameters['id'] ?? 'prod_1',
         ),
       ),
       GoRoute(
         path: AppRoutes.wishlist,
+        builder: (context, state) => const WishlistScreen(),
+      ),
+      GoRoute(
+        path: AppRoutes.checkout,
         builder: (context, state) => PhaseTabPlaceholderScreen(
-          title: context.l10n.wishlistTitle,
-          icon: Icons.favorite_border_rounded,
+          title: context.l10n.proceedToCheckout,
+          icon: Icons.payment_outlined,
         ),
       ),
       GoRoute(

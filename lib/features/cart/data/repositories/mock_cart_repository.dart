@@ -1,48 +1,79 @@
+import 'package:pehrawan/core/storage/app_storage_service.dart';
 import 'package:pehrawan/features/cart/domain/entities/cart_entities.dart';
 import 'package:pehrawan/features/cart/domain/repositories/cart_repository.dart';
 
+/// Hive-backed cart repository so guest and signed-in carts persist across restarts.
 class MockCartRepository implements CartRepository {
-  final List<CartItem> _items = [];
+  MockCartRepository(this._storage);
+
+  final AppStorageService _storage;
+  List<CartItem>? _cache;
+
+  Future<List<CartItem>> _load() async {
+    if (_cache != null) return _cache!;
+    try {
+      _cache = List<CartItem>.from(await _storage.getSavedCartItems());
+    } catch (_) {
+      _cache = [];
+    }
+    return _cache!;
+  }
+
+  Future<void> _persist(List<CartItem> items) async {
+    _cache = items;
+    try {
+      await _storage.saveCartItems(items);
+    } catch (_) {
+      // Ignore storage errors in unit tests without Hive initialized.
+    }
+  }
 
   @override
   Future<List<CartItem>> getCartItems() async {
-    await Future<void>.delayed(const Duration(milliseconds: 60));
-    return List.unmodifiable(_items);
+    final items = await _load();
+    return List.unmodifiable(items);
   }
 
   @override
   Future<void> addToCart(CartItem item) async {
-    final idx = _items.indexWhere(
+    final items = List<CartItem>.from(await _load());
+    final idx = items.indexWhere(
       (e) => e.productId == item.productId && e.sku == item.sku,
     );
     if (idx >= 0) {
-      final existing = _items[idx];
-      _items[idx] = existing.copyWith(
-        quantity: existing.quantity + item.quantity,
-      );
+      final existing = items[idx];
+      final maxAllowed = existing.maxStock > 0 ? existing.maxStock : 99;
+      final nextQty = (existing.quantity + item.quantity).clamp(1, maxAllowed);
+      items[idx] = existing.copyWith(quantity: nextQty);
     } else {
-      _items.add(item);
+      items.add(item);
     }
+    await _persist(items);
   }
 
   @override
   Future<void> updateQuantity(String itemId, int quantity) async {
-    final idx = _items.indexWhere((e) => e.id == itemId);
+    final items = List<CartItem>.from(await _load());
+    final idx = items.indexWhere((e) => e.id == itemId);
     if (idx < 0) return;
     if (quantity <= 0) {
-      _items.removeAt(idx);
+      items.removeAt(idx);
     } else {
-      _items[idx] = _items[idx].copyWith(quantity: quantity);
+      final maxAllowed = items[idx].maxStock > 0 ? items[idx].maxStock : 99;
+      items[idx] = items[idx].copyWith(quantity: quantity.clamp(1, maxAllowed));
     }
+    await _persist(items);
   }
 
   @override
   Future<void> removeFromCart(String itemId) async {
-    _items.removeWhere((e) => e.id == itemId);
+    final items = List<CartItem>.from(await _load());
+    items.removeWhere((e) => e.id == itemId);
+    await _persist(items);
   }
 
   @override
   Future<void> clearCart() async {
-    _items.clear();
+    await _persist([]);
   }
 }

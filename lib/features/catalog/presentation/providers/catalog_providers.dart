@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pehrawan/core/constants/app_constants.dart';
 import 'package:pehrawan/core/providers/app_providers.dart';
 import 'package:pehrawan/features/catalog/domain/entities/catalog_entities.dart';
+import 'package:pehrawan/features/wishlist/presentation/providers/wishlist_providers.dart';
 
 /// Currently selected department on Home & Categories.
 final selectedDepartmentIdProvider = StateProvider<String>(
@@ -46,17 +47,16 @@ final attributeSchemaProvider = FutureProvider.family<AttributeSchema?, String>(
   },
 );
 
-/// Local wishlist product IDs for instant heart toggle feedback.
+/// Local wishlist product IDs synced with [wishlistControllerProvider].
 class WishlistIdsNotifier extends Notifier<Set<String>> {
   @override
-  Set<String> build() => {'prod_1', 'prod_16'};
+  Set<String> build() {
+    return ref.watch(wishlistControllerProvider).valueOrNull?.ids ??
+        {'prod_1', 'prod_16'};
+  }
 
   void toggle(String productId) {
-    if (state.contains(productId)) {
-      state = {...state}..remove(productId);
-    } else {
-      state = {...state, productId};
-    }
+    ref.read(wishlistControllerProvider.notifier).toggleProduct(productId);
   }
 }
 

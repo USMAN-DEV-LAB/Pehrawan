@@ -354,4 +354,110 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get futureDeptsOff => 'آئندہ شعبہ جات غیر فعال (لانچ موڈ)';
+
+  @override
+  String onlyNLeft(int count) {
+    return 'اسٹاک میں صرف $count باقی ہیں';
+  }
+
+  @override
+  String get selectAllOptions => 'براہ کرم پہلے تمام ضروری آپشنز منتخب کریں';
+
+  @override
+  String get addedToCart => 'کارٹ میں شامل کر دیا گیا';
+
+  @override
+  String get viewCart => 'کارٹ دیکھیں';
+
+  @override
+  String get chat => 'چیٹ';
+
+  @override
+  String get chatSellerHint => 'فروخت کنندہ سے چیٹ یہاں کھلے گی۔';
+
+  @override
+  String get detailsTab => 'تفصیلات';
+
+  @override
+  String get reviewsTab => 'تبصرے';
+
+  @override
+  String get qaTab => 'سوال و جواب';
+
+  @override
+  String get similarProducts => 'ملتی جلتی مصنوعات';
+
+  @override
+  String get deliveryEstimate => 'معیاری ڈیلیوری';
+
+  @override
+  String soldBy(String seller) {
+    return 'فروخت کنندہ: $seller';
+  }
+
+  @override
+  String get priceDropAlert => 'قیمت کم ہونے کا الرٹ';
+
+  @override
+  String get emptyWishlistTitle => 'آپ کی پسندیدہ فہرست خالی ہے';
+
+  @override
+  String get emptyWishlistSubtitle =>
+      'اپنی پسندیدہ اشیاء محفوظ کریں اور قیمت کم ہونے پر اطلاع پائیں۔';
+
+  @override
+  String get promoCode => 'پرومو کوڈ';
+
+  @override
+  String get promoCodeHint => 'کوڈ درج کریں (مثلاً PEHRAWAN10)';
+
+  @override
+  String get apply => 'لاگو کریں';
+
+  @override
+  String promoApplied(String code) {
+    return 'پرومو کوڈ $code لاگو ہو گیا';
+  }
+
+  @override
+  String get promoInvalid => 'غلط یا زائد المیعاد پرومو کوڈ';
+
+  @override
+  String promoMinOrder(String amount) {
+    return 'کم از کم $amount کا آرڈر ضروری ہے';
+  }
+
+  @override
+  String get subtotal => 'ذیلی کل';
+
+  @override
+  String get discount => 'رعایت';
+
+  @override
+  String get deliveryFee => 'ڈیلیوری فیس';
+
+  @override
+  String get free => 'مفت';
+
+  @override
+  String get total => 'کل رقم';
+
+  @override
+  String get proceedToCheckout => 'چیک آؤٹ پر جائیں';
+
+  @override
+  String itemRemoved(String title) {
+    return '$title ہٹا دیا گیا';
+  }
+
+  @override
+  String get undo => 'واپس لائیں';
+
+  @override
+  String get noReviewsYet =>
+      'پاکستان بھر کے تصدیق شدہ خریداروں کی جانب سے 4.7 اوسط درجہ بندی۔';
+
+  @override
+  String get qaSampleQuestion =>
+      'سوال: کیا کپڑا خالص کاٹن/لان ہے؟\nجواب: جی ہاں، 100% اصل اور آرام دہ کپڑا معیاری سلائی کے ساتھ۔';
 }

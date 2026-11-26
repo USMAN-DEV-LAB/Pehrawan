@@ -36,7 +36,7 @@ final catalogRepositoryProvider = Provider<CatalogRepository>((ref) {
 });
 
 final cartRepositoryProvider = Provider<CartRepository>(
-  (_) => MockCartRepository(),
+  (ref) => MockCartRepository(ref.watch(appStorageProvider)),
 );
 
 final orderRepositoryProvider = Provider<OrderRepository>(
