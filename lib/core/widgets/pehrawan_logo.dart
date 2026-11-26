@@ -10,6 +10,7 @@ class PehrawanLogo extends StatelessWidget {
     this.showWordmark = true,
     this.showTagline = false,
     this.markSize = 44,
+    this.wordmarkFontSize,
     this.horizontal = false,
   });
 
@@ -17,6 +18,7 @@ class PehrawanLogo extends StatelessWidget {
   final bool showWordmark;
   final bool showTagline;
   final double markSize;
+  final double? wordmarkFontSize;
   final bool horizontal;
 
   @override
@@ -34,7 +36,9 @@ class PehrawanLogo extends StatelessWidget {
 
     final wordmark = Text(
       l10n.appName,
+      textAlign: TextAlign.center,
       style: theme.textTheme.headlineMedium?.copyWith(
+        fontSize: wordmarkFontSize,
         color: effectiveColor,
         fontWeight: FontWeight.w700,
         letterSpacing: -0.4,

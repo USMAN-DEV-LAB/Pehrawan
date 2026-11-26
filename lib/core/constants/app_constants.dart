@@ -21,7 +21,5 @@ abstract final class AppConstants {
   static const String privacyPolicyUrl = 'https://pehrawan.pk/privacy';
   static const String termsUrl = 'https://pehrawan.pk/terms';
 
-  static const int defaultDeliveryFeeRupees = 200;
-  static const int freeDeliveryThresholdRupees = 5000;
   static const int defaultPageSize = 12;
 }

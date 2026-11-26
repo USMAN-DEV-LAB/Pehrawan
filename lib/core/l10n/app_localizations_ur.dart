@@ -179,4 +179,179 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get invalidEmail => 'براہ کرم درست ای میل درج کریں';
+
+  @override
+  String get onboardingTitle1 => 'اپنا انداز دریافت کریں';
+
+  @override
+  String get onboardingSubtitle1 =>
+      'پاکستانی لان، کرتا، پریٹ اور تہوار کے ملبوسات قابل اعتماد برانڈز سے۔';
+
+  @override
+  String get onboardingTitle2 => 'ہر روز شاندار ڈیلز';
+
+  @override
+  String get onboardingSubtitle2 =>
+      'فلیش سیلز، واؤچرز اور روپے میں شفاف قیمتیں۔';
+
+  @override
+  String get onboardingTitle3 => 'کیش آن ڈیلیوری';
+
+  @override
+  String get onboardingSubtitle3 =>
+      'پاکستان بھر میں گھر کی دہلیز پر ادائیگی اور 7 دن کی آسان واپسی۔';
+
+  @override
+  String get languageSelectSubtitle =>
+      'آپ اسے کسی بھی وقت پروفائل سیٹنگز سے تبدیل کر سکتے ہیں۔';
+
+  @override
+  String get continueLabel => 'جاری رکھیں';
+
+  @override
+  String get loginTitle => 'پہراوان میں سائن ان کریں';
+
+  @override
+  String get loginSubtitle =>
+      '6 ہندسوں کا او ٹی پی حاصل کرنے کے لیے اپنا پاکستانی موبائل نمبر درج کریں۔';
+
+  @override
+  String get mobileNumber => 'موبائل نمبر';
+
+  @override
+  String get mobileNumberHint => '0300 1234567';
+
+  @override
+  String get sendOtp => 'او ٹی پی بھیجیں';
+
+  @override
+  String get otpVerification => 'او ٹی پی کی تصدیق';
+
+  @override
+  String otpSentTo(String phone) {
+    return '$phone پر بھیجا گیا 6 ہندسوں کا کوڈ درج کریں';
+  }
+
+  @override
+  String resendOtpIn(int seconds) {
+    return '$seconds سیکنڈ میں دوبارہ بھیجیں';
+  }
+
+  @override
+  String get resendOtp => 'کوڈ دوبارہ بھیجیں';
+
+  @override
+  String get verifyAndContinue => 'تصدیق کریں اور جاری رکھیں';
+
+  @override
+  String get changeNumber => 'نمبر تبدیل کریں';
+
+  @override
+  String get orContinueWith => 'یا';
+
+  @override
+  String get signInWithGoogle => 'گوگل کے ساتھ جاری رکھیں';
+
+  @override
+  String get mockOtpHint => 'موک موڈ: کوئی بھی 6 ہندسے درج کریں (مثلاً 123456)';
+
+  @override
+  String get homePlaceholderTitle => 'پہراوان میں خوش آمدید';
+
+  @override
+  String get homePlaceholderSubtitle =>
+      'ہوم، اقسام اور سرچ فیز 3 میں شامل کیے جائیں گے۔';
+
+  @override
+  String get signOut => 'سائن آؤٹ';
+
+  @override
+  String get vouchersTitle => 'آپ کے لیے واؤچرز';
+
+  @override
+  String get copyCode => 'کاپی';
+
+  @override
+  String codeCopied(String code) {
+    return 'واؤچر کوڈ $code کاپی ہو گیا';
+  }
+
+  @override
+  String minSpend(String amount) {
+    return 'کم از کم خریداری $amount';
+  }
+
+  @override
+  String get sortPopular => 'مقبول';
+
+  @override
+  String get sortPriceLow => 'قیمت: کم سے زیادہ';
+
+  @override
+  String get sortPriceHigh => 'قیمت: زیادہ سے کم';
+
+  @override
+  String get sortRating => 'بہترین درجہ بندی';
+
+  @override
+  String get filters => 'فلٹرز';
+
+  @override
+  String get applyFilters => 'فلٹرز لگائیں';
+
+  @override
+  String get clearFilters => 'سب صاف کریں';
+
+  @override
+  String get noProductsTitle => 'کوئی پروڈکٹ نہیں ملی';
+
+  @override
+  String get noProductsSubtitle =>
+      'براہ کرم فلٹرز یا تلاش کے الفاظ تبدیل کر کے دیکھیں۔';
+
+  @override
+  String get recentSearches => 'حالیہ تلاش';
+
+  @override
+  String get clearHistory => 'صاف کریں';
+
+  @override
+  String get trendingTags => 'مقبول تلاش';
+
+  @override
+  String get searchSuggestions => 'تجاویز';
+
+  @override
+  String resultsCount(int count) {
+    return '$count اشیاء';
+  }
+
+  @override
+  String get viewAllInCategory => 'سب دیکھیں';
+
+  @override
+  String get allProducts => 'تمام مصنوعات';
+
+  @override
+  String get wishlistTitle => 'پسندیدہ اشیاء';
+
+  @override
+  String get notificationsTitle => 'اطلاعات';
+
+  @override
+  String get comingSoonPhase => 'اگلے فیز میں دستیاب ہوگا';
+
+  @override
+  String get cameraSearchHint =>
+      'بصری تلاش کی اجازت فعال ہونے پر طلب کی جائے گی۔';
+
+  @override
+  String get voiceSearchHint =>
+      'صوتی تلاش کی اجازت فعال ہونے پر طلب کی جائے گی۔';
+
+  @override
+  String get futureDeptsOn => 'آئندہ شعبہ جات فعال کر دیے گئے (جوتے اور بیگز)';
+
+  @override
+  String get futureDeptsOff => 'آئندہ شعبہ جات غیر فعال (لانچ موڈ)';
 }

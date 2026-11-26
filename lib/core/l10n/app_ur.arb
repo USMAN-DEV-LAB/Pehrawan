@@ -67,5 +67,92 @@
   "otpRequired": "براہ کرم 6 ہندسوں کا او ٹی پی درج کریں",
   "otpInvalid": "او ٹی پی 6 ہندسوں کا ہونا چاہیے",
   "fieldRequired": "یہ خانہ پر کرنا ضروری ہے",
-  "invalidEmail": "براہ کرم درست ای میل درج کریں"
+  "invalidEmail": "براہ کرم درست ای میل درج کریں",
+  "onboardingTitle1": "اپنا انداز دریافت کریں",
+  "onboardingSubtitle1": "پاکستانی لان، کرتا، پریٹ اور تہوار کے ملبوسات قابل اعتماد برانڈز سے۔",
+  "onboardingTitle2": "ہر روز شاندار ڈیلز",
+  "onboardingSubtitle2": "فلیش سیلز، واؤچرز اور روپے میں شفاف قیمتیں۔",
+  "onboardingTitle3": "کیش آن ڈیلیوری",
+  "onboardingSubtitle3": "پاکستان بھر میں گھر کی دہلیز پر ادائیگی اور 7 دن کی آسان واپسی۔",
+  "languageSelectSubtitle": "آپ اسے کسی بھی وقت پروفائل سیٹنگز سے تبدیل کر سکتے ہیں۔",
+  "continueLabel": "جاری رکھیں",
+  "loginTitle": "پہراوان میں سائن ان کریں",
+  "loginSubtitle": "6 ہندسوں کا او ٹی پی حاصل کرنے کے لیے اپنا پاکستانی موبائل نمبر درج کریں۔",
+  "mobileNumber": "موبائل نمبر",
+  "mobileNumberHint": "0300 1234567",
+  "sendOtp": "او ٹی پی بھیجیں",
+  "otpVerification": "او ٹی پی کی تصدیق",
+  "otpSentTo": "{phone} پر بھیجا گیا 6 ہندسوں کا کوڈ درج کریں",
+  "@otpSentTo": {
+    "placeholders": {
+      "phone": {
+        "type": "String"
+      }
+    }
+  },
+  "resendOtpIn": "{seconds} سیکنڈ میں دوبارہ بھیجیں",
+  "@resendOtpIn": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "resendOtp": "کوڈ دوبارہ بھیجیں",
+  "verifyAndContinue": "تصدیق کریں اور جاری رکھیں",
+  "changeNumber": "نمبر تبدیل کریں",
+  "orContinueWith": "یا",
+  "signInWithGoogle": "گوگل کے ساتھ جاری رکھیں",
+  "mockOtpHint": "موک موڈ: کوئی بھی 6 ہندسے درج کریں (مثلاً 123456)",
+  "homePlaceholderTitle": "پہراوان میں خوش آمدید",
+  "homePlaceholderSubtitle": "ہوم، اقسام اور سرچ فیز 3 میں شامل کیے جائیں گے۔",
+  "signOut": "سائن آؤٹ",
+  "vouchersTitle": "آپ کے لیے واؤچرز",
+  "copyCode": "کاپی",
+  "codeCopied": "واؤچر کوڈ {code} کاپی ہو گیا",
+  "@codeCopied": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "minSpend": "کم از کم خریداری {amount}",
+  "@minSpend": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "sortPopular": "مقبول",
+  "sortPriceLow": "قیمت: کم سے زیادہ",
+  "sortPriceHigh": "قیمت: زیادہ سے کم",
+  "sortRating": "بہترین درجہ بندی",
+  "filters": "فلٹرز",
+  "applyFilters": "فلٹرز لگائیں",
+  "clearFilters": "سب صاف کریں",
+  "noProductsTitle": "کوئی پروڈکٹ نہیں ملی",
+  "noProductsSubtitle": "براہ کرم فلٹرز یا تلاش کے الفاظ تبدیل کر کے دیکھیں۔",
+  "recentSearches": "حالیہ تلاش",
+  "clearHistory": "صاف کریں",
+  "trendingTags": "مقبول تلاش",
+  "searchSuggestions": "تجاویز",
+  "resultsCount": "{count} اشیاء",
+  "@resultsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "viewAllInCategory": "سب دیکھیں",
+  "allProducts": "تمام مصنوعات",
+  "wishlistTitle": "پسندیدہ اشیاء",
+  "notificationsTitle": "اطلاعات",
+  "comingSoonPhase": "اگلے فیز میں دستیاب ہوگا",
+  "cameraSearchHint": "بصری تلاش کی اجازت فعال ہونے پر طلب کی جائے گی۔",
+  "voiceSearchHint": "صوتی تلاش کی اجازت فعال ہونے پر طلب کی جائے گی۔",
+  "futureDeptsOn": "آئندہ شعبہ جات فعال کر دیے گئے (جوتے اور بیگز)",
+  "futureDeptsOff": "آئندہ شعبہ جات غیر فعال (لانچ موڈ)"
 }

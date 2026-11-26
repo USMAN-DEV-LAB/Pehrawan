@@ -179,4 +179,179 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get invalidEmail => 'Please enter a valid email address';
+
+  @override
+  String get onboardingTitle1 => 'Discover Your Style';
+
+  @override
+  String get onboardingSubtitle1 =>
+      'Curated Pakistani lawn, kurtas, pret and festive wear from trusted artisans.';
+
+  @override
+  String get onboardingTitle2 => 'Great Deals Every Day';
+
+  @override
+  String get onboardingSubtitle2 =>
+      'Flash sales, seasonal vouchers and honest pricing in Rupees.';
+
+  @override
+  String get onboardingTitle3 => 'Cash on Delivery';
+
+  @override
+  String get onboardingSubtitle3 =>
+      'Pay at your doorstep across Pakistan with 7-day easy returns.';
+
+  @override
+  String get languageSelectSubtitle =>
+      'You can change this anytime in your profile settings.';
+
+  @override
+  String get continueLabel => 'Continue';
+
+  @override
+  String get loginTitle => 'Sign in to Pehrawan';
+
+  @override
+  String get loginSubtitle =>
+      'Enter your Pakistani mobile number to receive a 6-digit OTP.';
+
+  @override
+  String get mobileNumber => 'Mobile Number';
+
+  @override
+  String get mobileNumberHint => '0300 1234567';
+
+  @override
+  String get sendOtp => 'Send OTP';
+
+  @override
+  String get otpVerification => 'OTP Verification';
+
+  @override
+  String otpSentTo(String phone) {
+    return 'Enter the 6-digit code sent to $phone';
+  }
+
+  @override
+  String resendOtpIn(int seconds) {
+    return 'Resend code in ${seconds}s';
+  }
+
+  @override
+  String get resendOtp => 'Resend OTP';
+
+  @override
+  String get verifyAndContinue => 'Verify & Continue';
+
+  @override
+  String get changeNumber => 'Change number';
+
+  @override
+  String get orContinueWith => 'or';
+
+  @override
+  String get signInWithGoogle => 'Continue with Google';
+
+  @override
+  String get mockOtpHint => 'Mock mode: enter any 6 digits (e.g. 123456)';
+
+  @override
+  String get homePlaceholderTitle => 'Welcome to Pehrawan';
+
+  @override
+  String get homePlaceholderSubtitle =>
+      'Home, Categories, and Search will be built in Phase 3.';
+
+  @override
+  String get signOut => 'Sign Out';
+
+  @override
+  String get vouchersTitle => 'Vouchers For You';
+
+  @override
+  String get copyCode => 'Copy';
+
+  @override
+  String codeCopied(String code) {
+    return 'Voucher code $code copied';
+  }
+
+  @override
+  String minSpend(String amount) {
+    return 'Min. spend $amount';
+  }
+
+  @override
+  String get sortPopular => 'Popular';
+
+  @override
+  String get sortPriceLow => 'Price: Low to High';
+
+  @override
+  String get sortPriceHigh => 'Price: High to Low';
+
+  @override
+  String get sortRating => 'Top Rated';
+
+  @override
+  String get filters => 'Filters';
+
+  @override
+  String get applyFilters => 'Apply Filters';
+
+  @override
+  String get clearFilters => 'Clear All';
+
+  @override
+  String get noProductsTitle => 'No products found';
+
+  @override
+  String get noProductsSubtitle =>
+      'Try adjusting your filters or search query.';
+
+  @override
+  String get recentSearches => 'Recent Searches';
+
+  @override
+  String get clearHistory => 'Clear';
+
+  @override
+  String get trendingTags => 'Trending Now';
+
+  @override
+  String get searchSuggestions => 'Suggestions';
+
+  @override
+  String resultsCount(int count) {
+    return '$count items';
+  }
+
+  @override
+  String get viewAllInCategory => 'View All';
+
+  @override
+  String get allProducts => 'All Products';
+
+  @override
+  String get wishlistTitle => 'Wishlist';
+
+  @override
+  String get notificationsTitle => 'Notifications';
+
+  @override
+  String get comingSoonPhase => 'Coming in next phase';
+
+  @override
+  String get cameraSearchHint =>
+      'Visual search permission will be requested when enabled.';
+
+  @override
+  String get voiceSearchHint =>
+      'Voice search permission will be requested when enabled.';
+
+  @override
+  String get futureDeptsOn => 'Future departments enabled (Footwear & Bags)';
+
+  @override
+  String get futureDeptsOff => 'Future departments disabled (Launch mode)';
 }

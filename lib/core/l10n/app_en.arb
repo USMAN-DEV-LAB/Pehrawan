@@ -67,5 +67,92 @@
   "otpRequired": "Please enter the 6-digit OTP",
   "otpInvalid": "OTP must be 6 digits",
   "fieldRequired": "This field is required",
-  "invalidEmail": "Please enter a valid email address"
+  "invalidEmail": "Please enter a valid email address",
+  "onboardingTitle1": "Discover Your Style",
+  "onboardingSubtitle1": "Curated Pakistani lawn, kurtas, pret and festive wear from trusted artisans.",
+  "onboardingTitle2": "Great Deals Every Day",
+  "onboardingSubtitle2": "Flash sales, seasonal vouchers and honest pricing in Rupees.",
+  "onboardingTitle3": "Cash on Delivery",
+  "onboardingSubtitle3": "Pay at your doorstep across Pakistan with 7-day easy returns.",
+  "languageSelectSubtitle": "You can change this anytime in your profile settings.",
+  "continueLabel": "Continue",
+  "loginTitle": "Sign in to Pehrawan",
+  "loginSubtitle": "Enter your Pakistani mobile number to receive a 6-digit OTP.",
+  "mobileNumber": "Mobile Number",
+  "mobileNumberHint": "0300 1234567",
+  "sendOtp": "Send OTP",
+  "otpVerification": "OTP Verification",
+  "otpSentTo": "Enter the 6-digit code sent to {phone}",
+  "@otpSentTo": {
+    "placeholders": {
+      "phone": {
+        "type": "String"
+      }
+    }
+  },
+  "resendOtpIn": "Resend code in {seconds}s",
+  "@resendOtpIn": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "resendOtp": "Resend OTP",
+  "verifyAndContinue": "Verify & Continue",
+  "changeNumber": "Change number",
+  "orContinueWith": "or",
+  "signInWithGoogle": "Continue with Google",
+  "mockOtpHint": "Mock mode: enter any 6 digits (e.g. 123456)",
+  "homePlaceholderTitle": "Welcome to Pehrawan",
+  "homePlaceholderSubtitle": "Home, Categories, and Search will be built in Phase 3.",
+  "signOut": "Sign Out",
+  "vouchersTitle": "Vouchers For You",
+  "copyCode": "Copy",
+  "codeCopied": "Voucher code {code} copied",
+  "@codeCopied": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "minSpend": "Min. spend {amount}",
+  "@minSpend": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "sortPopular": "Popular",
+  "sortPriceLow": "Price: Low to High",
+  "sortPriceHigh": "Price: High to Low",
+  "sortRating": "Top Rated",
+  "filters": "Filters",
+  "applyFilters": "Apply Filters",
+  "clearFilters": "Clear All",
+  "noProductsTitle": "No products found",
+  "noProductsSubtitle": "Try adjusting your filters or search query.",
+  "recentSearches": "Recent Searches",
+  "clearHistory": "Clear",
+  "trendingTags": "Trending Now",
+  "searchSuggestions": "Suggestions",
+  "resultsCount": "{count} items",
+  "@resultsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "viewAllInCategory": "View All",
+  "allProducts": "All Products",
+  "wishlistTitle": "Wishlist",
+  "notificationsTitle": "Notifications",
+  "comingSoonPhase": "Coming in next phase",
+  "cameraSearchHint": "Visual search permission will be requested when enabled.",
+  "voiceSearchHint": "Voice search permission will be requested when enabled.",
+  "futureDeptsOn": "Future departments enabled (Footwear & Bags)",
+  "futureDeptsOff": "Future departments disabled (Launch mode)"
 }

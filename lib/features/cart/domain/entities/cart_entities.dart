@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pehrawan/core/constants/app_constants.dart';
+import 'package:pehrawan/core/config/remote_config_values.dart';
 
 part 'cart_entities.freezed.dart';
 part 'cart_entities.g.dart';
@@ -54,6 +54,7 @@ abstract class CartTotals with _$CartTotals {
     required List<CartItem> items,
     int discount = 0,
     int? customDeliveryFee,
+    RemoteConfigValues config = const RemoteConfigValues(),
   }) {
     final subtotal = items.fold<int>(0, (sum, item) => sum + item.lineTotal);
     final itemCount = items.fold<int>(0, (sum, item) => sum + item.quantity);
@@ -72,9 +73,9 @@ abstract class CartTotals with _$CartTotals {
     final afterDiscount = subtotal - safeDiscount;
     final deliveryFee =
         customDeliveryFee ??
-        (afterDiscount >= AppConstants.freeDeliveryThresholdRupees
+        (afterDiscount >= config.freeDeliveryThresholdRupees
             ? 0
-            : AppConstants.defaultDeliveryFeeRupees);
+            : config.deliveryFeeRupees);
 
     final total = afterDiscount + deliveryFee;
 

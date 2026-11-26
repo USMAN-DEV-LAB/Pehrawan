@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:pehrawan/core/config/remote_config_values.dart';
 import 'package:pehrawan/core/network/dio_client.dart';
+import 'package:pehrawan/core/storage/app_storage_service.dart';
 import 'package:pehrawan/features/cart/data/repositories/mock_cart_repository.dart';
 import 'package:pehrawan/features/cart/domain/repositories/cart_repository.dart';
 import 'package:pehrawan/features/catalog/data/repositories/mock_catalog_repository.dart';
@@ -11,6 +13,14 @@ import 'package:pehrawan/features/orders/domain/repositories/order_repository.da
 
 final secureStorageProvider = Provider<FlutterSecureStorage>(
   (_) => const FlutterSecureStorage(),
+);
+
+final appStorageProvider = Provider<AppStorageService>(
+  (_) => AppStorageService(),
+);
+
+final remoteConfigProvider = StateProvider<RemoteConfigValues>(
+  (_) => const RemoteConfigValues(),
 );
 
 final dioClientProvider = Provider<DioClient>(

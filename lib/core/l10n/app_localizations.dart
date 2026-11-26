@@ -421,6 +421,318 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Please enter a valid email address'**
   String get invalidEmail;
+
+  /// No description provided for @onboardingTitle1.
+  ///
+  /// In en, this message translates to:
+  /// **'Discover Your Style'**
+  String get onboardingTitle1;
+
+  /// No description provided for @onboardingSubtitle1.
+  ///
+  /// In en, this message translates to:
+  /// **'Curated Pakistani lawn, kurtas, pret and festive wear from trusted artisans.'**
+  String get onboardingSubtitle1;
+
+  /// No description provided for @onboardingTitle2.
+  ///
+  /// In en, this message translates to:
+  /// **'Great Deals Every Day'**
+  String get onboardingTitle2;
+
+  /// No description provided for @onboardingSubtitle2.
+  ///
+  /// In en, this message translates to:
+  /// **'Flash sales, seasonal vouchers and honest pricing in Rupees.'**
+  String get onboardingSubtitle2;
+
+  /// No description provided for @onboardingTitle3.
+  ///
+  /// In en, this message translates to:
+  /// **'Cash on Delivery'**
+  String get onboardingTitle3;
+
+  /// No description provided for @onboardingSubtitle3.
+  ///
+  /// In en, this message translates to:
+  /// **'Pay at your doorstep across Pakistan with 7-day easy returns.'**
+  String get onboardingSubtitle3;
+
+  /// No description provided for @languageSelectSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'You can change this anytime in your profile settings.'**
+  String get languageSelectSubtitle;
+
+  /// No description provided for @continueLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue'**
+  String get continueLabel;
+
+  /// No description provided for @loginTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in to Pehrawan'**
+  String get loginTitle;
+
+  /// No description provided for @loginSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your Pakistani mobile number to receive a 6-digit OTP.'**
+  String get loginSubtitle;
+
+  /// No description provided for @mobileNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Mobile Number'**
+  String get mobileNumber;
+
+  /// No description provided for @mobileNumberHint.
+  ///
+  /// In en, this message translates to:
+  /// **'0300 1234567'**
+  String get mobileNumberHint;
+
+  /// No description provided for @sendOtp.
+  ///
+  /// In en, this message translates to:
+  /// **'Send OTP'**
+  String get sendOtp;
+
+  /// No description provided for @otpVerification.
+  ///
+  /// In en, this message translates to:
+  /// **'OTP Verification'**
+  String get otpVerification;
+
+  /// No description provided for @otpSentTo.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter the 6-digit code sent to {phone}'**
+  String otpSentTo(String phone);
+
+  /// No description provided for @resendOtpIn.
+  ///
+  /// In en, this message translates to:
+  /// **'Resend code in {seconds}s'**
+  String resendOtpIn(int seconds);
+
+  /// No description provided for @resendOtp.
+  ///
+  /// In en, this message translates to:
+  /// **'Resend OTP'**
+  String get resendOtp;
+
+  /// No description provided for @verifyAndContinue.
+  ///
+  /// In en, this message translates to:
+  /// **'Verify & Continue'**
+  String get verifyAndContinue;
+
+  /// No description provided for @changeNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Change number'**
+  String get changeNumber;
+
+  /// No description provided for @orContinueWith.
+  ///
+  /// In en, this message translates to:
+  /// **'or'**
+  String get orContinueWith;
+
+  /// No description provided for @signInWithGoogle.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue with Google'**
+  String get signInWithGoogle;
+
+  /// No description provided for @mockOtpHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Mock mode: enter any 6 digits (e.g. 123456)'**
+  String get mockOtpHint;
+
+  /// No description provided for @homePlaceholderTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome to Pehrawan'**
+  String get homePlaceholderTitle;
+
+  /// No description provided for @homePlaceholderSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Home, Categories, and Search will be built in Phase 3.'**
+  String get homePlaceholderSubtitle;
+
+  /// No description provided for @signOut.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign Out'**
+  String get signOut;
+
+  /// No description provided for @vouchersTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Vouchers For You'**
+  String get vouchersTitle;
+
+  /// No description provided for @copyCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Copy'**
+  String get copyCode;
+
+  /// No description provided for @codeCopied.
+  ///
+  /// In en, this message translates to:
+  /// **'Voucher code {code} copied'**
+  String codeCopied(String code);
+
+  /// No description provided for @minSpend.
+  ///
+  /// In en, this message translates to:
+  /// **'Min. spend {amount}'**
+  String minSpend(String amount);
+
+  /// No description provided for @sortPopular.
+  ///
+  /// In en, this message translates to:
+  /// **'Popular'**
+  String get sortPopular;
+
+  /// No description provided for @sortPriceLow.
+  ///
+  /// In en, this message translates to:
+  /// **'Price: Low to High'**
+  String get sortPriceLow;
+
+  /// No description provided for @sortPriceHigh.
+  ///
+  /// In en, this message translates to:
+  /// **'Price: High to Low'**
+  String get sortPriceHigh;
+
+  /// No description provided for @sortRating.
+  ///
+  /// In en, this message translates to:
+  /// **'Top Rated'**
+  String get sortRating;
+
+  /// No description provided for @filters.
+  ///
+  /// In en, this message translates to:
+  /// **'Filters'**
+  String get filters;
+
+  /// No description provided for @applyFilters.
+  ///
+  /// In en, this message translates to:
+  /// **'Apply Filters'**
+  String get applyFilters;
+
+  /// No description provided for @clearFilters.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear All'**
+  String get clearFilters;
+
+  /// No description provided for @noProductsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'No products found'**
+  String get noProductsTitle;
+
+  /// No description provided for @noProductsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Try adjusting your filters or search query.'**
+  String get noProductsSubtitle;
+
+  /// No description provided for @recentSearches.
+  ///
+  /// In en, this message translates to:
+  /// **'Recent Searches'**
+  String get recentSearches;
+
+  /// No description provided for @clearHistory.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear'**
+  String get clearHistory;
+
+  /// No description provided for @trendingTags.
+  ///
+  /// In en, this message translates to:
+  /// **'Trending Now'**
+  String get trendingTags;
+
+  /// No description provided for @searchSuggestions.
+  ///
+  /// In en, this message translates to:
+  /// **'Suggestions'**
+  String get searchSuggestions;
+
+  /// No description provided for @resultsCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} items'**
+  String resultsCount(int count);
+
+  /// No description provided for @viewAllInCategory.
+  ///
+  /// In en, this message translates to:
+  /// **'View All'**
+  String get viewAllInCategory;
+
+  /// No description provided for @allProducts.
+  ///
+  /// In en, this message translates to:
+  /// **'All Products'**
+  String get allProducts;
+
+  /// No description provided for @wishlistTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Wishlist'**
+  String get wishlistTitle;
+
+  /// No description provided for @notificationsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications'**
+  String get notificationsTitle;
+
+  /// No description provided for @comingSoonPhase.
+  ///
+  /// In en, this message translates to:
+  /// **'Coming in next phase'**
+  String get comingSoonPhase;
+
+  /// No description provided for @cameraSearchHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Visual search permission will be requested when enabled.'**
+  String get cameraSearchHint;
+
+  /// No description provided for @voiceSearchHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Voice search permission will be requested when enabled.'**
+  String get voiceSearchHint;
+
+  /// No description provided for @futureDeptsOn.
+  ///
+  /// In en, this message translates to:
+  /// **'Future departments enabled (Footwear & Bags)'**
+  String get futureDeptsOn;
+
+  /// No description provided for @futureDeptsOff.
+  ///
+  /// In en, this message translates to:
+  /// **'Future departments disabled (Launch mode)'**
+  String get futureDeptsOff;
 }
 
 class _AppLocalizationsDelegate

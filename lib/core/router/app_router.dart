@@ -2,13 +2,36 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:pehrawan/core/l10n/l10n_ext.dart';
 import 'package:pehrawan/core/providers/app_providers.dart';
+import 'package:pehrawan/core/widgets/main_shell_scaffold.dart';
+import 'package:pehrawan/features/auth/presentation/providers/auth_provider.dart';
+import 'package:pehrawan/features/auth/presentation/screens/login_screen.dart';
+import 'package:pehrawan/features/catalog/presentation/screens/categories_screen.dart';
+import 'package:pehrawan/features/catalog/presentation/screens/product_listing_screen.dart';
 import 'package:pehrawan/features/design_system/presentation/screens/design_system_showcase_screen.dart';
+import 'package:pehrawan/features/home/presentation/screens/home_screen.dart';
+import 'package:pehrawan/features/onboarding/presentation/screens/language_select_screen.dart';
+import 'package:pehrawan/features/onboarding/presentation/screens/onboarding_screen.dart';
+import 'package:pehrawan/features/onboarding/presentation/screens/splash_screen.dart';
+import 'package:pehrawan/features/search/presentation/screens/search_screen.dart';
 
 abstract final class AppRoutes {
-  static const String home = '/';
-  static const String designSystem = '/design-system';
+  static const String splash = '/splash';
+  static const String onboarding = '/onboarding';
+  static const String language = '/language';
   static const String login = '/login';
+  static const String home = '/';
+  static const String categories = '/categories';
+  static const String offers = '/offers';
+  static const String cart = '/cart';
+  static const String profile = '/profile';
+  static const String search = '/search';
+  static const String listing = '/listing';
+  static const String productBase = '/product';
+  static const String wishlist = '/wishlist';
+  static const String notifications = '/notifications';
+  static const String designSystem = '/design-system';
 }
 
 final routerProvider = Provider<GoRouter>((ref) {
@@ -16,14 +39,12 @@ final routerProvider = Provider<GoRouter>((ref) {
   final isGuest = ref.watch(isGuestProvider);
 
   return GoRouter(
-    initialLocation: kDebugMode ? AppRoutes.designSystem : AppRoutes.home,
+    initialLocation: AppRoutes.splash,
     redirect: (context, state) {
       final path = state.uri.path;
-      // Always allow debug design-system showcase
       if (kDebugMode && path == AppRoutes.designSystem) {
         return null;
       }
-      // Protected routes (checkout, orders, profile) will guard when added in Phases 2-6
       final isProtected =
           path.startsWith('/checkout') ||
           path.startsWith('/orders') ||
@@ -35,19 +56,126 @@ final routerProvider = Provider<GoRouter>((ref) {
     },
     routes: [
       GoRoute(
-        path: AppRoutes.home,
-        builder: (context, state) => const DesignSystemShowcaseScreen(),
+        path: AppRoutes.splash,
+        builder: (context, state) => const SplashScreen(),
+      ),
+      GoRoute(
+        path: AppRoutes.onboarding,
+        builder: (context, state) => const OnboardingScreen(),
+      ),
+      GoRoute(
+        path: AppRoutes.language,
+        builder: (context, state) => const LanguageSelectScreen(),
+      ),
+      GoRoute(
+        path: AppRoutes.login,
+        builder: (context, state) => const LoginScreen(),
+      ),
+      StatefulShellRoute.indexedStack(
+        builder: (context, state, navigationShell) {
+          return MainShellScaffold(navigationShell: navigationShell);
+        },
+        branches: [
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: AppRoutes.home,
+                builder: (context, state) => const HomeScreen(),
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: AppRoutes.categories,
+                builder: (context, state) => const CategoriesScreen(),
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: AppRoutes.offers,
+                builder: (context, state) => ProductListingScreen(
+                  isFlashSale: true,
+                  title: context.l10n.offers,
+                ),
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: AppRoutes.cart,
+                builder: (context, state) => PhaseTabPlaceholderScreen(
+                  title: context.l10n.cart,
+                  icon: Icons.shopping_bag_outlined,
+                ),
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: AppRoutes.profile,
+                builder: (context, state) => PhaseTabPlaceholderScreen(
+                  title: context.l10n.profile,
+                  icon: Icons.person_outline_rounded,
+                  actionLabel: context.l10n.signOut,
+                  onAction: () async {
+                    await ref.read(authControllerProvider.notifier).signOut();
+                    if (!context.mounted) return;
+                    context.go(AppRoutes.login);
+                  },
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+      GoRoute(
+        path: AppRoutes.search,
+        builder: (context, state) => const SearchScreen(),
+      ),
+      GoRoute(
+        path: AppRoutes.listing,
+        builder: (context, state) {
+          final params = state.uri.queryParameters;
+          return ProductListingScreen(
+            departmentId: params['departmentId'],
+            categoryId: params['categoryId'],
+            isFlashSale: params['flash'] == 'true',
+            schemaId: params['schemaId'],
+            title: params['title'],
+          );
+        },
+      ),
+      GoRoute(
+        path: '${AppRoutes.productBase}/:id',
+        builder: (context, state) => PhaseTabPlaceholderScreen(
+          title: 'Product ${state.pathParameters['id'] ?? ''}',
+          icon: Icons.checkroom_outlined,
+        ),
+      ),
+      GoRoute(
+        path: AppRoutes.wishlist,
+        builder: (context, state) => PhaseTabPlaceholderScreen(
+          title: context.l10n.wishlistTitle,
+          icon: Icons.favorite_border_rounded,
+        ),
+      ),
+      GoRoute(
+        path: AppRoutes.notifications,
+        builder: (context, state) => PhaseTabPlaceholderScreen(
+          title: context.l10n.notificationsTitle,
+          icon: Icons.notifications_none_rounded,
+        ),
       ),
       if (kDebugMode)
         GoRoute(
           path: AppRoutes.designSystem,
           builder: (context, state) => const DesignSystemShowcaseScreen(),
         ),
-      GoRoute(
-        path: AppRoutes.login,
-        builder: (context, state) =>
-            const Scaffold(body: Center(child: Text('Login — Phase 2'))),
-      ),
     ],
   );
 });

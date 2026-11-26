@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pehrawan/core/constants/app_constants.dart';
+import 'package:pehrawan/core/config/remote_config_values.dart';
 import 'package:pehrawan/core/utils/money_utils.dart';
 import 'package:pehrawan/features/cart/domain/entities/cart_entities.dart';
 
@@ -58,16 +58,21 @@ void main() {
       expect(totals.itemCount, 0);
     });
 
+    const config = RemoteConfigValues();
+
     test('applies delivery fee below free threshold', () {
-      final totals = CartTotals.compute(items: const [itemB]);
+      final totals = CartTotals.compute(items: const [itemB], config: config);
       expect(totals.subtotal, 1500);
-      expect(totals.deliveryFee, AppConstants.defaultDeliveryFeeRupees);
-      expect(totals.total, 1500 + AppConstants.defaultDeliveryFeeRupees);
+      expect(totals.deliveryFee, config.deliveryFeeRupees);
+      expect(totals.total, 1500 + config.deliveryFeeRupees);
       expect(totals.itemCount, 1);
     });
 
     test('waives delivery fee at or above free threshold', () {
-      final totals = CartTotals.compute(items: const [itemA, itemB]);
+      final totals = CartTotals.compute(
+        items: const [itemA, itemB],
+        config: config,
+      );
       expect(totals.subtotal, 5500);
       expect(totals.deliveryFee, 0);
       expect(totals.total, 5500);
@@ -78,18 +83,23 @@ void main() {
       final totals = CartTotals.compute(
         items: const [itemA, itemB],
         discount: 1000,
+        config: config,
       );
       expect(totals.subtotal, 5500);
       expect(totals.discount, 1000);
       // After discount is 4500 (< 5000 threshold), so delivery fee applies
-      expect(totals.deliveryFee, AppConstants.defaultDeliveryFeeRupees);
-      expect(totals.total, 4500 + AppConstants.defaultDeliveryFeeRupees);
+      expect(totals.deliveryFee, config.deliveryFeeRupees);
+      expect(totals.total, 4500 + config.deliveryFeeRupees);
     });
 
     test('clamps discount so total never goes negative', () {
-      final totals = CartTotals.compute(items: const [itemB], discount: 99999);
+      final totals = CartTotals.compute(
+        items: const [itemB],
+        discount: 99999,
+        config: config,
+      );
       expect(totals.discount, 1500);
-      expect(totals.total, AppConstants.defaultDeliveryFeeRupees);
+      expect(totals.total, config.deliveryFeeRupees);
     });
   });
 }
